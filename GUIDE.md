@@ -115,7 +115,7 @@ Before starting, ensure you have:
    - Name it something like "WhatsApp Chats" or "WA Bridge"
 4. Right-click on the **category** you just created
 5. Click **"Copy ID"** - this is your `DISCORD_CHANNEL_ID` (category ID)
-6. (Optional) Create a separate channel for admin commands
+6. Create a separate channel for admin commands
 7. Right-click on that channel and **"Copy ID"** - this is your `ADMIN_DISCORD_CHANNEL_ID`
 
 **Important:** The `DISCORD_CHANNEL_ID` should be a **category ID**, not a regular channel ID. All WhatsApp chat channels will be created inside this category for better organization.
@@ -752,6 +752,8 @@ All commands include comprehensive error handling:
 ### Enhanced Features
 
 #### Message Reactions
+**Currently not working**
+
 When someone reacts to a message on WhatsApp (e.g., with ❤️), the reaction will appear in the Discord thread:
 ```
 💫 **John Doe** reacted with ❤️

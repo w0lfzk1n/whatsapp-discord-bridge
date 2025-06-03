@@ -102,7 +102,7 @@ Messages now appear as beautiful embeds with:
 - `!mute` / `!unmute` - Control chat forwarding
 - `!block` / `!unblock` - Block/unblock contacts
 
-### Admin Commands (Stats Channel)
+### Admin Commands (Admin Channel)
 - `!stats` - Show bridge statistics
 - `!pause` / `!start` - Control message forwarding globally
 - `!getchats [page]` - List all WhatsApp chats (paginated)
