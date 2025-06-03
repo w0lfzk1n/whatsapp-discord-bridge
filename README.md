@@ -7,6 +7,7 @@ A comprehensive bridge that forwards messages between WhatsApp and Discord with 
 - 🔄 **Two-way message forwarding** between WhatsApp and Discord
 - 🎨 **Beautiful embed formatting** with user-specific colors
 - 📱 **Complete media support** (images, videos, audio, documents, stickers)
+   - **ViewOnce** ViewOnce Media is not supported, since it can not be opened in WhatsApp Web.
 - 👥 **Group chat support** with distinct user colors
 - 📊 **Stats and monitoring** commands
 - 🎛️ **Advanced admin controls** (pause, resume, purge, mute)
