@@ -116,7 +116,7 @@ Before starting, ensure you have:
 4. Right-click on the **category** you just created
 5. Click **"Copy ID"** - this is your `DISCORD_CHANNEL_ID` (category ID)
 6. (Optional) Create a separate channel for admin commands
-7. Right-click on that channel and **"Copy ID"** - this is your `STATS_DISCORD_CHANNEL_ID`
+7. Right-click on that channel and **"Copy ID"** - this is your `ADMIN_DISCORD_CHANNEL_ID`
 
 **Important:** The `DISCORD_CHANNEL_ID` should be a **category ID**, not a regular channel ID. All WhatsApp chat channels will be created inside this category for better organization.
 
@@ -855,8 +855,8 @@ Simply type: `!stats`
 
 ### Where to Use
 
-- **Discord**: In the channel specified by `STATS_DISCORD_CHANNEL_ID`
-- **WhatsApp**: From the chat specified by `STATS_WHATSAPP_CHAT_ID`
+- **Discord**: In the channel specified by `ADMIN_DISCORD_CHANNEL_ID`
+- **WhatsApp**: From the chat specified by `ADMIN_WHATSAPP_CHAT_ID`
 
 ### Sample Output
 
