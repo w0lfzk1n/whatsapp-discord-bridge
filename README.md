@@ -79,8 +79,17 @@ For detailed setup instructions, configuration options, and troubleshooting, see
 
 3. **Start the bridge:**
    ```bash
-   npm start
+   bash start.sh
    ```
+**View logs**
+
+This project uses **pm2** which allows projects to run in the background. So **CRTL+C** does not stop the bot.
+
+- `pm2 logs`: To see the output.
+- `pm2 kill`: To kill the bot entirely.
+- `pm2 restart all`: To restart the bot.
+- `pm2 stop all`: To stop the bot for the moment.
+- `pm2 start all`: To start after stopped.
 
 4. **Scan QR code** with WhatsApp mobile app
 
