@@ -157,24 +157,16 @@ cp .env.example .env
 
 Edit the `.env` file with your values:
 
-```env
-# Discord Bot Configuration
-DISCORD_BOT_TOKEN=your_discord_bot_token_here
-DISCORD_CHANNEL_ID=your_discord_channel_id_here
+**.env variables**
 
-# Stats Command Configuration (Optional)
-STATS_DISCORD_CHANNEL_ID=your_stats_discord_channel_id_here
-STATS_WHATSAPP_CHAT_ID=your_stats_whatsapp_chat_id_here
-
-# Optional: Set to 'development' for more verbose logging
-NODE_ENV=production
-```
-
-**Replace the values:**
-- `DISCORD_BOT_TOKEN`: The token you copied from Discord Developer Portal
-- `DISCORD_CHANNEL_ID`: The channel ID where threads will be created
-- `STATS_DISCORD_CHANNEL_ID`: (Optional) Channel ID where `!stats` command works
-- `STATS_WHATSAPP_CHAT_ID`: (Optional) WhatsApp chat ID where `!stats` command works
+- Do not change the values on `VERSION`, `AUTHOR`, `GITHUB_REPO`.
+- `DISCORD_BOT_TOKEN`: The Token to use your Bot.
+- `DISCORD_GUILD_ID`: The ID for your Server.
+- `DISCORD_CHANNEL_ID`: The ID of the category, where your Chats should appear. *You may need to create a Category on your server for it.*.
+- `ADMIN_DISCORD_CHANNEL_ID`: The ID of a Textchannel, where you can execute admin command like `stats`, `getchats`, `purge`,....
+- `ADMIN_WHATSAPP_CHAT_ID`: The WhatsApp ChatID that should be allowed to execute commands. *Can be your own number (where the bot runs) or another. Example-Format: `4912345678@c.us`*.
+- `COMMAND_PREFIX`: The prefix for the commands, default is `!`.
+- `NODE_ENV`: When set to `production` it will log less information in the console, set to `development` logs more information to the console.
 
 ### Step 3: Verify Configuration
 

@@ -27,6 +27,11 @@ Deleted messages are preserved too.
 
 ## Before you start...
 
+**IMPORTANT SAFETY NOTE**
+
+- Only use this on a private Discord Server! If other people are on that server, they might be able to read your private WhatsApp messages!
+- Don't forget to set your Bot on `Private` after the setup is done!
+
 Yes, you need a server/computer that runs 24/7 to use this.
 
 Yes, your messages are safe using this.
@@ -60,6 +65,17 @@ For detailed setup instructions, configuration options, and troubleshooting, see
 - `DISCORD_CHANNEL_ID` should be a **Discord category ID** where all WhatsApp chat channels will be created
 - Create a category in your Discord server first, then copy its ID
 - This keeps all WhatsApp chats organized in one place
+
+**.env variables**
+
+- Do not change the values on `VERSION`, `AUTHOR`, `GITHUB_REPO`.
+- `DISCORD_BOT_TOKEN`: The Token to use your Bot.
+- `DISCORD_GUILD_ID`: The ID for your Server.
+- `DISCORD_CHANNEL_ID`: The ID of the category, where your Chats should appear. *You may need to create a Category on your server for it.*.
+- `ADMIN_DISCORD_CHANNEL_ID`: The ID of a Textchannel, where you can execute admin command like `stats`, `getchats`, `purge`,....
+- `ADMIN_WHATSAPP_CHAT_ID`: The WhatsApp ChatID that should be allowed to execute commands. *Can be your own number (where the bot runs) or another. Example-Format: `4912345678@c.us`*.
+- `COMMAND_PREFIX`: The prefix for the commands, default is `!`.
+- `NODE_ENV`: When set to `production` it will log less information in the console, set to `development` logs more information to the console.
 
 3. **Start the bridge:**
    ```bash
