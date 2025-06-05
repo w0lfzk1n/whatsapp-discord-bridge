@@ -27,8 +27,8 @@ function validateEnvironmentVariables() {
 
   // Optional environment variables with their placeholder values
   const optionalVars = {
-    STATS_DISCORD_CHANNEL_ID: "your_stats_discord_channel_id_here",
-    STATS_WHATSAPP_CHAT_ID: "your_stats_whatsapp_chat_id_here",
+    ADMIN_DISCORD_CHANNEL_ID: "your_ADMIN_DISCORD_CHANNEL_ID_here",
+    ADMIN_WHATSAPP_CHAT_ID: "your_ADMIN_WHATSAPP_CHAT_ID_here",
   }
 
   // Check required variables
@@ -66,7 +66,7 @@ function validateEnvironmentVariables() {
   }
 
   // Check Discord IDs format (should be numeric and 17-19 characters)
-  const discordIdVars = ["DISCORD_GUILD_ID", "DISCORD_CHANNEL_ID", "STATS_DISCORD_CHANNEL_ID"]
+  const discordIdVars = ["DISCORD_GUILD_ID", "DISCORD_CHANNEL_ID", "ADMIN_DISCORD_CHANNEL_ID"]
   for (const varName of discordIdVars) {
     const value = process.env[varName]
     if (value && value !== requiredVars[varName] && value !== optionalVars[varName]) {
@@ -78,13 +78,13 @@ function validateEnvironmentVariables() {
 
   // Check WhatsApp chat ID format if provided
   if (
-    process.env.STATS_WHATSAPP_CHAT_ID &&
-    process.env.STATS_WHATSAPP_CHAT_ID !== optionalVars.STATS_WHATSAPP_CHAT_ID
+    process.env.ADMIN_WHATSAPP_CHAT_ID &&
+    process.env.ADMIN_WHATSAPP_CHAT_ID !== optionalVars.ADMIN_WHATSAPP_CHAT_ID
   ) {
-    const waId = process.env.STATS_WHATSAPP_CHAT_ID
+    const waId = process.env.ADMIN_WHATSAPP_CHAT_ID
     if (!waId.includes("@") || (!waId.endsWith("@c.us") && !waId.endsWith("@g.us"))) {
       errors.push(
-        `❌ STATS_WHATSAPP_CHAT_ID should be a WhatsApp chat ID ending with @c.us (contact) or @g.us (group). Current value: "${waId}"`,
+        `❌ ADMIN_WHATSAPP_CHAT_ID should be a WhatsApp chat ID ending with @c.us (contact) or @g.us (group). Current value: "${waId}"`,
       )
     }
   }
@@ -202,14 +202,14 @@ class WhatsAppDiscordBridge {
       console.log(`🎮 Command prefix: ${process.env.COMMAND_PREFIX || "!"}`)
 
       // Set stats command channels
-      if (process.env.STATS_DISCORD_CHANNEL_ID) {
-        this.discordManager.setStatsChannelId(process.env.STATS_DISCORD_CHANNEL_ID)
-        console.log(`⚜️ Admin Discord channel set to: ${process.env.STATS_DISCORD_CHANNEL_ID}`)
+      if (process.env.ADMIN_DISCORD_CHANNEL_ID) {
+        this.discordManager.setStatsChannelId(process.env.ADMIN_DISCORD_CHANNEL_ID)
+        console.log(`⚜️ Admin Discord channel set to: ${process.env.ADMIN_DISCORD_CHANNEL_ID}`)
       }
 
-      if (process.env.STATS_WHATSAPP_CHAT_ID) {
-        this.whatsappManager.setStatsChatId(process.env.STATS_WHATSAPP_CHAT_ID)
-        console.log(`⚜️ Admin WhatsApp ID set to: ${process.env.STATS_WHATSAPP_CHAT_ID}`)
+      if (process.env.ADMIN_WHATSAPP_CHAT_ID) {
+        this.whatsappManager.setStatsChatId(process.env.ADMIN_WHATSAPP_CHAT_ID)
+        console.log(`⚜️ Admin WhatsApp ID set to: ${process.env.ADMIN_WHATSAPP_CHAT_ID}`)
       }
 
       // Set up graceful shutdown
