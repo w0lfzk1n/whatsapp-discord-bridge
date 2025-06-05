@@ -15,7 +15,8 @@
     "import-fresh": "^3.3.1",
     "fs-extra": "^11.1.1",
     "moment-timezone": "^0.5.43",
-    "pm2": "^6.0.5"
+    "pm2": "^6.0.5",
+    "fluent-ffmpeg": "^2.1.2"
   },
   "engines": {
     "node": ">=16.9.0"
